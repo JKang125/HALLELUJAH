@@ -4,9 +4,8 @@ const input = document.getElementById('nameInput')
 button.addEventListener('click',async function(){
     const name = input.value
 
-    const response = await
-    fetch('https://api.chucknorris.io/jokes/random')
+    const response = await fetch('https://api.chucknorris.io/jokes/random')
     const data = await response.json()
 
-    alert('Welcome,' + name + '! Here is your joke:' +data.value)
+    document.getElementById('result').textContent ='Welcome,' + name + '!' +data.value
 })
